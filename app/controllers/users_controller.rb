@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
   
+  require 'digest/sha1'
+    
    skip_filter :check_token, :only =>[:new,:create,:show]
    skip_filter :check_user, :only =>[:new,:create,:show]
   
@@ -14,14 +16,9 @@ class UsersController < ApplicationController
   
   def create
     @user = User.new(params[:user])
-
-
-    # generate token
     
     token = generate_token
-    logger.info "Token is "+token
-    
-    # check if email is already registered
+        
     existing_user = User.find_by_email(@user.email)
     if existing_user !=nil
       existing_user.token = token
@@ -44,7 +41,7 @@ class UsersController < ApplicationController
     encrypt(Time.new)
   end
 
-  def encrypt(salt)
+  def encryptsalt)
         Digest::SHA1.hexdigest("--#{salt}--#{salt}--")
   end
 

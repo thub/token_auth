@@ -24,5 +24,13 @@ config.action_controller.perform_caching             = true
 # config.action_mailer.raise_delivery_errors = false
 
 
+ActionMailer::Base.delivery_method = :sendmail
+
+
+ActionMailer::Base.sendmail_settings = {
+:location       => '/usr/sbin/sendmail',
+:arguments      => '-i -t'
+}
+
 SITE = "http://www.thubhub.com"
 TESTSERVER = false
