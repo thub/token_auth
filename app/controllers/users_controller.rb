@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     encrypt(Time.new)
   end
 
-  def encryptsalt(salt)
+  def encrypt(salt)
         Digest::SHA1.hexdigest("--#{salt}--#{salt}--")
   end
 
