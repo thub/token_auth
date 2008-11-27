@@ -17793,3 +17793,104 @@ Rendering messages/index
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
 Completed in 20ms (View: 7, DB: 4) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-27 22:49:24) [GET]
+  Session ID: BAh7CToKdG9rZW4iLWZmZGQ2YTY4MjAzNDA0MDI0YzY4NzI2OTk5ZWI0YzM5ODRlNGY2M2I6EWN1cnJlbnRfdXNlcm86CVVzZXIHOhZAYXR0cmlidXRlc19jYWNoZXsAOhBAYXR0cmlidXRlc3sLIgluYW1lMCIPdXBkYXRlZF9hdCIYMjAwOC0xMS0yNyAxOTo0MDo0MyIKdG9rZW4iLWZmZGQ2YTY4MjAzNDA0MDI0YzY4NzI2OTk5ZWI0YzM5ODRlNGY2M2IiB2lkIgcxNSIKZW1haWwiGHRqaHViZXJ0ekBnbWFpbC5jb20iD2NyZWF0ZWRfYXQiGDIwMDgtMTEtMjcgMTA6Mjc6NDg6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--c205e26cef95643d58489fdc0efff2eb9ff97a3f
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+token from session is ffdd6a68203404024c68726999eb4c3984e4f63b
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = 'ffdd6a68203404024c68726999eb4c3984e4f63b') LIMIT 1[0m
+  [4;36;1mMessage Load (0.2ms)[0m   [0;1mSELECT * FROM `messages` [0m
+  [4;35;1mMessage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering template within layouts/application
+Rendering messages/index
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+Completed in 23ms (View: 13, DB: 4) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#destroy (for 127.0.0.1 at 2008-11-27 22:49:36) [DELETE]
+  Session ID: BAh7CToKdG9rZW4iLWZmZGQ2YTY4MjAzNDA0MDI0YzY4NzI2OTk5ZWI0YzM5ODRlNGY2M2I6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzOhFjdXJyZW50X3VzZXJvOglVc2VyBzoWQGF0dHJpYnV0ZXNfY2FjaGV7ADoQQGF0dHJpYnV0ZXN7CyIJbmFtZTAiD3VwZGF0ZWRfYXQiGDIwMDgtMTEtMjcgMTk6NDA6NDMiCnRva2VuIi1mZmRkNmE2ODIwMzQwNDAyNGM2ODcyNjk5OWViNGMzOTg0ZTRmNjNiIgdpZCIHMTUiCmVtYWlsIhh0amh1YmVydHpAZ21haWwuY29tIg9jcmVhdGVkX2F0IhgyMDA4LTExLTI3IDEwOjI3OjQ4IgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--df090ccd54986719f106a82c9eeb122cf7b0d8f8
+  Parameters: {"authenticity_token"=>"94e4288581ca7c6ae787c72bd457f36d06062e5a", "_method"=>"delete", "action"=>"destroy", "id"=>"3", "controller"=>"messages"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+token from session is ffdd6a68203404024c68726999eb4c3984e4f63b
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = 'ffdd6a68203404024c68726999eb4c3984e4f63b') LIMIT 1[0m
+  [4;35;1mMessage Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mMessage Load (0.6ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.`id` = 3) [0m
+  [4;35;1mUser Load (2.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Destroy (0.3ms)[0m   [0m DELETE FROM `messages`
+ WHERE `id` = 3
+[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/messages
+Completed in 16ms (DB: 10) | 302 Found [http://localhost/messages/3]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-27 22:49:36) [GET]
+  Session ID: BAh7CToKdG9rZW4iLWZmZGQ2YTY4MjAzNDA0MDI0YzY4NzI2OTk5ZWI0YzM5ODRlNGY2M2I6EWN1cnJlbnRfdXNlcm86CVVzZXIHOhZAYXR0cmlidXRlc19jYWNoZXsAOhBAYXR0cmlidXRlc3sLIgluYW1lMCIPdXBkYXRlZF9hdCIYMjAwOC0xMS0yNyAxOTo0MDo0MyIKdG9rZW4iLWZmZGQ2YTY4MjAzNDA0MDI0YzY4NzI2OTk5ZWI0YzM5ODRlNGY2M2IiB2lkIgcxNSIKZW1haWwiGHRqaHViZXJ0ekBnbWFpbC5jb20iD2NyZWF0ZWRfYXQiGDIwMDgtMTEtMjcgMTA6Mjc6NDg6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--c205e26cef95643d58489fdc0efff2eb9ff97a3f
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+token from session is ffdd6a68203404024c68726999eb4c3984e4f63b
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = 'ffdd6a68203404024c68726999eb4c3984e4f63b') LIMIT 1[0m
+  [4;35;1mMessage Load (0.2ms)[0m   [0mSELECT * FROM `messages` [0m
+  [4;36;1mMessage Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering template within layouts/application
+Rendering messages/index
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+Completed in 25ms (View: 13, DB: 5) | 200 OK [http://localhost/messages]
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2008-11-27 22:49:38) [GET]
+  Session ID: BAh7CToKdG9rZW4iLWZmZGQ2YTY4MjAzNDA0MDI0YzY4NzI2OTk5ZWI0YzM5ODRlNGY2M2I6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzOhFjdXJyZW50X3VzZXJvOglVc2VyBzoWQGF0dHJpYnV0ZXNfY2FjaGV7ADoQQGF0dHJpYnV0ZXN7CyIJbmFtZTAiD3VwZGF0ZWRfYXQiGDIwMDgtMTEtMjcgMTk6NDA6NDMiCnRva2VuIi1mZmRkNmE2ODIwMzQwNDAyNGM2ODcyNjk5OWViNGMzOTg0ZTRmNjNiIgdpZCIHMTUiCmVtYWlsIhh0amh1YmVydHpAZ21haWwuY29tIg9jcmVhdGVkX2F0IhgyMDA4LTExLTI3IDEwOjI3OjQ4IgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--df090ccd54986719f106a82c9eeb122cf7b0d8f8
+  Parameters: {"action"=>"logout", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+token from session is ffdd6a68203404024c68726999eb4c3984e4f63b
+  [4;35;1mUser Columns (2.5ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = 'ffdd6a68203404024c68726999eb4c3984e4f63b') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/logout
+Completed in 13ms (View: 6, DB: 3) | 200 OK [http://localhost/leave]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-27 22:49:41) [GET]
+  Session ID: BAh7CToKdG9rZW4wOhFjdXJyZW50X3VzZXIwOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b89ac82b9a35391f87d40c95942fb113c0bf7105
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to controllerUsersactionnew
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/messages]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-11-27 22:49:41) [GET]
+  Session ID: BAh7CToKdG9rZW4wOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMzoRY3VycmVudF91c2VyMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d64bd7e0a34324388238d3b2181f4c0da5b0d25a
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/users/new]
