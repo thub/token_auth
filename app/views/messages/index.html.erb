@@ -5,7 +5,7 @@
 
 <% for message in @messages %>
   <tr>
-	<td valign="top"><p class="preElement"><%=h message.owner.email %> says <br/> <%= word_wrap message.content, 40 %></p></td>
+	<td valign="top"><p class="preElement"><%=h message.owner.email %> says <br/><%= word_wrap message.content, 40 %></p></td>
 	
 	<% if is_owner(message,current_user) %>
     <td><%= link_to 'Edit', edit_message_path(message) %></td>

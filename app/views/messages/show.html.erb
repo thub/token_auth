@@ -1,5 +1,7 @@
 <p>
-  <b>Content:</b>
+  <b>Message:</b>
+	<p class="preElement"><%=h @message.owner.email %> says <br/> <%= word_wrap @message.content, 40 %></p>
+
   <%=h @message.content %>
 </p>
 

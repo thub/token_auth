@@ -20,6 +20,8 @@ class ApplicationController < ActionController::Base
   def check_token
     if token_is_on_request?
       set_token_in_session
+      redirect_to :controller=>"Messages", :action=>"index" 
+      return
     elsif token_is_in_session?
       # do nothing
     else
@@ -39,7 +41,6 @@ class ApplicationController < ActionController::Base
   def set_token_in_session
     session[:token] = params[:token]
   end  
-  
   
   def check_user
     logger.info("token from session is "+session[:token])

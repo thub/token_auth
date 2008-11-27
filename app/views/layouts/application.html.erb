@@ -21,6 +21,11 @@
 			</div>
 
 			<div id="menu">
+				<% if user_logged_in? %>
+				<p>You are logged in with email <%= current_user.email %></p>
+				<p>The application will remember you even if you close the browser. If you are sharing this computer please click logout below after you are done.</p>
+				<%= link_to 'Logout', logout_url %>
+				<% end %>	
 			</div>
 
 
@@ -28,10 +33,7 @@
 
 				<p style="color: green"><%= flash[:notice] %></p>
 
-				<% if user_logged_in? %>
-				<p>You are logged in with email <%= current_user.email %> <%= link_to 'Logout', logout_url %>
-				</p>
-				<% end %>
+				
 
 
 
