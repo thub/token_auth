@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-  
-  require 'digest/sha1'
-    
+      
    skip_filter :check_token, :only =>[:new,:create,:show]
    skip_filter :check_user, :only =>[:new,:create,:show]
   
@@ -41,7 +39,7 @@ class UsersController < ApplicationController
     encrypt(Time.new)
   end
 
-  def encryptsalt)
+  def encryptsalt(salt)
         Digest::SHA1.hexdigest("--#{salt}--#{salt}--")
   end
 
