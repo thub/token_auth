@@ -1,22 +1,32 @@
-<h1>Listing messages</h1>
+<h1>Comments</h1>
 
 <table>
-  <tr>
-    <th>Content</th>
-    <th>Added by</th>
-  </tr>
+  
 
 <% for message in @messages %>
   <tr>
-    <td><%=h message.content %></td>
-    <td><%=h message.owner.email %></td>
-    <td><%= link_to 'Show', message %></td>
+	<td valign="top"><p class="preElement"><%=h message.owner.email %> says <br/> <%= word_wrap message.content, 40 %></p></td>
+	
+	<% if is_owner(message,current_user) %>
     <td><%= link_to 'Edit', edit_message_path(message) %></td>
     <td><%= link_to 'Destroy', message, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New message', new_message_path %>
+<% form_for(@message) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    	<%= f.text_area :content,:rows=>4 %>
+  </p>
+ 
+  <p>
+    <%= f.submit "Add comment" %>
+  </p>
+
+<br/>
+<% end %>

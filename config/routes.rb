@@ -2,6 +2,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :messages
 
   map.resources :users
+  
+  map.enter '/enter/:token', :controller => 'messages', :action => 'index'
+  map.logout '/leave', :controller => 'users', :action => 'logout'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
 

@@ -1,5 +1,4 @@
-<h1>Registration</h1>
-Please enter your email address. You will receive an email from us with a link that you can use to access the application
+Please enter your email address. You will receive an email from us with a link that you can use to view the messages.
 
 <% form_for(@user) do |f| %>
   <%= f.error_messages %>
@@ -7,8 +6,21 @@ Please enter your email address. You will receive an email from us with a link t
   <p>
     <%= f.label :email %><br />
     <%= f.text_field :email %>
+<%= f.submit "Send" %>
   </p>
-  <p>
-    <%= f.submit "Send" %>
-  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+<br/>
+
+
 <% end %>

@@ -3,10 +3,10 @@
 <% form_for(@message) do |f| %>
   <%= f.error_messages %>
 
-  <p>
-    <%= f.label :content %><br />
-    <%= f.text_field :content %>
-  </p>
+
+<p>	<%= f.text_area :content,:rows=>4 %> </p>
+
+  
   
   <p>
     <%= f.submit "Update" %>

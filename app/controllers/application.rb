@@ -7,6 +7,16 @@ class ApplicationController < ActionController::Base
   before_filter :check_token
   before_filter :check_user
   
+  #def rescue_action_in_public(exception)
+  #    render :text => "<html><body><p>doh!</p> <!--  #{exception}  --></body></html>"
+  #end
+  
+  
+    def local_request?
+      false
+    end
+  
+  
   def check_token
     if token_is_on_request?
       set_token_in_session
@@ -47,6 +57,14 @@ class ApplicationController < ActionController::Base
     session[:current_user]
   end
   
+  def user_logged_in?
+    current_user!=nil
+  end
+  
+  def logout
+    session[:current_user]=nil
+    session[:token]=nil
+  end
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store

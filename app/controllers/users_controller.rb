@@ -25,6 +25,7 @@ class UsersController < ApplicationController
     existing_user = User.find_by_email(@user.email)
     if existing_user !=nil
       existing_user.token = token
+      existing_user.save
       send_token_email_to_existing_user existing_user
       flash[:notice] = 'Email was successfully sent'
       redirect_to (existing_user)
@@ -49,10 +50,13 @@ class UsersController < ApplicationController
 
   def send_token_email_to_existing_user(user)  
     logger.info "Sending token to existing user #{user.token} to #{user.email}"
+    Mailer.deliver_existing_user_token_notification(user)
+    
   end
   
   def send_token_email_to_new_user(user)  
     logger.info "Sending token to new user #{user.token} to #{user.email}"
+    Mailer.deliver_new_user_token_notification(user)    
   end
   
 
