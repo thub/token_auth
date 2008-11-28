@@ -16,7 +16,7 @@ set :scm, :git
 set :repository, "ssh://thub@trustrelay.com/home/thub/work/token_auth"
 set :branch, "master"
 
-role :app, "www.thubhub.com"
-role :web, "www.thubhub.com"
-role :db,  "www.thubhub.com", :primary => true
+role :app, "auth.thubhub.com"
+role :web, "auth.thubhub.com"
+role :db,  "auth.thubhub.com", :primary => true
 
