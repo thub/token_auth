@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :messages
 
   map.resources :users
+  map.home '/', :controller => "messages", :action => 'index'
+  
   
   map.enter '/enter/:token', :controller => 'messages', :action => 'index'
   map.logout '/leave', :controller => 'users', :action => 'logout'
