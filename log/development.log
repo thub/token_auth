@@ -17894,3 +17894,53 @@ Processing UsersController#new (for 127.0.0.1 at 2008-11-27 22:49:41) [GET]
 Rendering template within layouts/application
 Rendering users/new
 Completed in 16ms (View: 9, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-28 09:19:20) [GET]
+  Session ID: BAh7CToKdG9rZW4wOhFjdXJyZW50X3VzZXIwOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b89ac82b9a35391f87d40c95942fb113c0bf7105
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to controllerUsersactionnew
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-11-28 09:19:20) [GET]
+  Session ID: BAh7CToKdG9rZW4wOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMzoRY3VycmVudF91c2VyMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d64bd7e0a34324388238d3b2181f4c0da5b0d25a
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 45ms (View: 22, DB: 3) | 200 OK [http://localhost/users/new]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-28 09:19:46) [GET]
+  Session ID: BAh7CToKdG9rZW4wOhFjdXJyZW50X3VzZXIwOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b89ac82b9a35391f87d40c95942fb113c0bf7105
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to controllerUsersactionnew
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-11-28 09:19:46) [GET]
+  Session ID: BAh7CToKdG9rZW4wOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMzoRY3VycmVudF91c2VyMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d64bd7e0a34324388238d3b2181f4c0da5b0d25a
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/users/new]
