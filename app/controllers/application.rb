@@ -24,8 +24,8 @@ class ApplicationController < ActionController::Base
         set_token_in_session
         redirect_to :controller=>"Messages", :action=>"index" 
       else
-          flash[:notice] = "You appear to be using an old entry link. Fetch a new one by entering your email below"
-        redirect_to :controller=>"Users", :action=>"new", :search=>"old_token"
+        flash[:notice] = "You appear to be using an old entry link. Fetch a new one by entering your email below"
+        redirect_to :controller=>"Users", :action=>"new"
       end
       
       return
