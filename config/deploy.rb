@@ -6,7 +6,7 @@ set :application, "token_auth"
 set :deploy_to, "/var/www/apps/#{application}"
 set :user, "thub"
 set :runner,nil
-set :use_sudo, true
+set :use_sudo, false
 default_run_options[:pty] = true 
 
 # If you aren't using Subversion to manage your source code, specify
