@@ -6,22 +6,28 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   
   before_filter :check_token
-  before_filter :check_user
   
   #def rescue_action_in_public(exception)
   #    render :text => "<html><body><p>doh!</p> <!--  #{exception}  --></body></html>"
   #end
   
   
-    def local_request?
-      false
-    end
+  def local_request?
+    false
+  end
   
   
   def check_token
     if token_is_on_request?
-      set_token_in_session
-      redirect_to :controller=>"Messages", :action=>"index" 
+      
+      if token_matches_a_user?       
+        set_token_in_session
+        redirect_to :controller=>"Messages", :action=>"index" 
+      else
+          flash[:notice] = "You appear to be using an old entry link. Fetch a new one by entering your email below"
+        redirect_to :controller=>"Users", :action=>"new", :search=>"old_token"
+      end
+      
       return
     elsif token_is_in_session?
       # do nothing
@@ -41,22 +47,14 @@ class ApplicationController < ActionController::Base
   
   def set_token_in_session
     session[:token] = params[:token]
-  end  
+  end      
   
-  def check_user
-    logger.info("token from session is "+session[:token])
-    current_user = User.find_by_token(session[:token])
-    if current_user == nil
-      redirect_to :controller=>"Users",:action=>"new"             
-      return
-    else
-      session[:current_user] = current_user
-    end
+  def token_matches_a_user?
+    User.find_by_token(params[:token])!=nil
   end
-    
   
   def current_user
-    session[:current_user]
+    User.find_by_token(session[:token])
   end
   
   def user_logged_in?
@@ -64,7 +62,6 @@ class ApplicationController < ActionController::Base
   end
   
   def logout
-    session[:current_user]=nil
     session[:token]=nil
   end
 
