@@ -21271,3 +21271,579 @@ Rendering messages/index
   [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '921115233d801afe61445007365ed36d3e554368') LIMIT 1[0m
   [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '921115233d801afe61445007365ed36d3e554368') LIMIT 1[0m
 Completed in 99ms (View: 30, DB: 64) | 200 OK [http://localhost/messages]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-30 20:03:32) [POST]
+  Session ID: BAh7CToKdG9rZW4iLTkyMTExNTIzM2Q4MDFhZmU2MTQ0NTAwNzM2NWVkMzZkM2U1NTQzNjg6EWN1cnJlbnRfdXNlcjA6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--6e7dd516c7ef28fd84792dbc2e18d4c01423673e
+  Parameters: {"user"=>{"email"=>"tjhubertz@gmail.com"}, "commit"=>"Send", "authenticity_token"=>"94e4288581ca7c6ae787c72bd457f36d06062e5a", "action"=>"create", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+
+NameError (uninitialized constant Rails::SecretKeyGenerator):
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:428:in `load_missing_constant'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:77:in `const_missing'
+    /app/controllers/users_controller.rb:46:in `generate_token'
+    /app/controllers/users_controller.rb:21:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:507:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:148:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:507:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:148:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.0/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/_trace (30.6ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-30 20:05:51) [POST]
+  Session ID: BAh7CToKdG9rZW4iLTkyMTExNTIzM2Q4MDFhZmU2MTQ0NTAwNzM2NWVkMzZkM2U1NTQzNjg6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzOhFjdXJyZW50X3VzZXIwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--cbf0898b1a2cda9040f9bb72ecfce9a7fc876cc9
+  Parameters: {"user"=>{"email"=>"tjhubertz@gmail.com"}, "commit"=>"Send", "authenticity_token"=>"94e4288581ca7c6ae787c72bd457f36d06062e5a", "action"=>"create", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+
+
+NameError (uninitialized constant UsersController::SecretKeyGenerator):
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:102:in `const_missing'
+    /app/controllers/users_controller.rb:46:in `generate_token'
+    /app/controllers/users_controller.rb:21:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:507:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:148:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:507:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:148:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.0/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/_trace (85.2ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/_request_and_response (0.9ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-30 20:07:32) [POST]
+  Session ID: BAh7CToKdG9rZW4iLTkyMTExNTIzM2Q4MDFhZmU2MTQ0NTAwNzM2NWVkMzZkM2U1NTQzNjg6EWN1cnJlbnRfdXNlcjA6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--6e7dd516c7ef28fd84792dbc2e18d4c01423673e
+  Parameters: {"user"=>{"email"=>"tjhubertz@gmail.com"}, "commit"=>"Send", "authenticity_token"=>"94e4288581ca7c6ae787c72bd457f36d06062e5a", "action"=>"create", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+
+
+NameError (uninitialized constant UsersController::SecureRandom):
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:102:in `const_missing'
+    /app/controllers/users_controller.rb:47:in `generate_token'
+    /app/controllers/users_controller.rb:21:in `create'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:1213:in `perform_action_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:617:in `call_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.0/lib/active_record/connection_adapters/abstract/query_cache.rb:48:in `cache'
+    /Library/Ruby/Gems/1.8/gems/activerecord-2.2.0/lib/active_record/query_cache.rb:8:in `cache'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `send'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:533:in `process_without_filters'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/session_management.rb:134:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/base.rb:401:in `process'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:180:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:107:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:120:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:119:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:129:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/dispatcher.rb:36:in `dispatch'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:76:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/../lib/mongrel/rails.rb:74:in `process'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:159:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:158:in `process_client'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:285:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `initialize'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `new'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel.rb:268:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:282:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/configurator.rb:281:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:128:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/lib/mongrel/command.rb:212:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.4/bin/mongrel_rails:281
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load_without_new_constant_marking'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:507:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:141:in `load'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.0/lib/commands/servers/mongrel.rb:64
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:148:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:507:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.0/lib/active_support/dependencies.rb:148:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.0/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    ./script/server:3
+
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/_trace (29.0ms)
+Rendered /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-30 20:07:57) [POST]
+  Session ID: BAh7CToKdG9rZW4iLTkyMTExNTIzM2Q4MDFhZmU2MTQ0NTAwNzM2NWVkMzZkM2U1NTQzNjg6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzOhFjdXJyZW50X3VzZXIwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--cbf0898b1a2cda9040f9bb72ecfce9a7fc876cc9
+  Parameters: {"user"=>{"email"=>"tjhubertz@gmail.com"}, "commit"=>"Send", "authenticity_token"=>"94e4288581ca7c6ae787c72bd457f36d06062e5a", "action"=>"create", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'tjhubertz@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `token` = '9afe8f222af8ea08104083dcaf', `updated_at` = '2008-11-30 19:07:57' WHERE `id` = 15[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCOMMIT[0m
+Sending token to existing user 9afe8f222af8ea08104083dcaf to tjhubertz@gmail.com
+Sent mail to tjhubertz@gmail.com
+
+Date: Sun, 30 Nov 2008 20:07:57 +0100
+From: Do not reply <bounce@thubhub.com>
+To: tjhubertz@gmail.com
+Subject: [http://localhost:3000] Your access token
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+This is your new link to log on as tjhubertz@gmail.com
+
+  http://localhost:3000/enter/9afe8f222af8ea08104083dcaf
+
+Regards
+thubhub.com
+
+
+Redirected to #<User:0x233fd18>
+Completed in 102ms (DB: 4) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-30 20:07:57) [GET]
+  Session ID: BAh7CToKdG9rZW4iLTkyMTExNTIzM2Q4MDFhZmU2MTQ0NTAwNzM2NWVkMzZkM2U1NTQzNjg6EWN1cnJlbnRfdXNlcjA6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSJHRW1haWwgd2l0aCBlbnRyeSBsaW5rIHdhcyBzdWNjZXNzZnVsbHkgc2VudCB0byB0amh1YmVydHpAZ21haWwuY29tBjoKQHVzZWR7BjsJRg==--de2ba725e7e7f6d9e6934dbb6452c86ad9ec9d75
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '921115233d801afe61445007365ed36d3e554368') LIMIT 1[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '921115233d801afe61445007365ed36d3e554368') LIMIT 1[0m
+Completed in 12ms (View: 4, DB: 2) | 200 OK [http://localhost/users/15]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-30 20:08:11) [POST]
+  Session ID: BAh7CToKdG9rZW4iLTkyMTExNTIzM2Q4MDFhZmU2MTQ0NTAwNzM2NWVkMzZkM2U1NTQzNjg6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzOhFjdXJyZW50X3VzZXIwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSJHRW1haWwgd2l0aCBlbnRyeSBsaW5rIHdhcyBzdWNjZXNzZnVsbHkgc2VudCB0byB0amh1YmVydHpAZ21haWwuY29tBjoKQHVzZWR7BjsJVA==--6f7385044a75ea4b5c773902b89989bb59530dbf
+  Parameters: {"user"=>{"email"=>"tjhubertz@gmail.com"}, "commit"=>"Send", "authenticity_token"=>"94e4288581ca7c6ae787c72bd457f36d06062e5a", "action"=>"create", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'tjhubertz@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `token` = '47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1', `updated_at` = '2008-11-30 19:08:11' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mCOMMIT[0m
+Sending token to existing user 47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1 to tjhubertz@gmail.com
+Sent mail to tjhubertz@gmail.com
+
+Date: Sun, 30 Nov 2008 20:08:11 +0100
+From: Do not reply <bounce@thubhub.com>
+To: tjhubertz@gmail.com
+Subject: [http://localhost:3000] Your access token
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+This is your new link to log on as tjhubertz@gmail.com
+
+  http://localhost:3000/enter/47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1
+
+Regards
+thubhub.com
+
+
+Redirected to #<User:0x221a2bc>
+Completed in 94ms (DB: 5) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-30 20:08:11) [GET]
+  Session ID: BAh7CToKdG9rZW4iLTkyMTExNTIzM2Q4MDFhZmU2MTQ0NTAwNzM2NWVkMzZkM2U1NTQzNjg6EWN1cnJlbnRfdXNlcjA6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSJHRW1haWwgd2l0aCBlbnRyeSBsaW5rIHdhcyBzdWNjZXNzZnVsbHkgc2VudCB0byB0amh1YmVydHpAZ21haWwuY29tBjoKQHVzZWR7BjsJRg==--de2ba725e7e7f6d9e6934dbb6452c86ad9ec9d75
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '921115233d801afe61445007365ed36d3e554368') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '921115233d801afe61445007365ed36d3e554368') LIMIT 1[0m
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/users/15]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-30 20:08:32) [GET]
+  Session ID: BAh7CToKdG9rZW4iLTkyMTExNTIzM2Q4MDFhZmU2MTQ0NTAwNzM2NWVkMzZkM2U1NTQzNjg6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzOhFjdXJyZW50X3VzZXIwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewY6C25vdGljZSJHRW1haWwgd2l0aCBlbnRyeSBsaW5rIHdhcyBzdWNjZXNzZnVsbHkgc2VudCB0byB0amh1YmVydHpAZ21haWwuY29tBjoKQHVzZWR7BjsJVA==--6f7385044a75ea4b5c773902b89989bb59530dbf
+  Parameters: {"token"=>"47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1", "action"=>"index", "controller"=>"messages"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1') LIMIT 1[0m
+Redirected to controllerMessagesactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 6ms (DB: 2) | 302 Found [http://localhost/enter/47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-30 20:08:32) [GET]
+  Session ID: BAh7CToKdG9rZW4iAcg0N2I4NTdlZTZjNDIyZDA0ZTBlZDM4ZmNhN2NhNzE5ZDE2ZWRkYTYyYWNhMTMwMzFjODMzZGYyMTY0ZmM4OTAwMGE4YWU4MzMyMjE5ODIxYjk5NTI1YWNjY2U0MjQ1ZTg1YjZlNjEyNGEyODdiNmFjMmJhZjIzZDU0OTdjNTYwM2UxYmY3N2M3NmY4ZDFiZmI0YzhjODFiNzQ3NzViYzkxM2EzYTU4NDQyMzNkYzY1MWVlMmY5OTJmZTE0MDQ2OWVmZTNhMjhkMToRY3VycmVudF91c2VyMDoMY3NyZl9pZCIlODkzNzIyZDA5ZWFmMzMxYjBmNTA5MjcxN2NiZGJiYTMiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--02075d76f008ed6f1ae44c56c952779b0f42692e
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mMessage Load (0.2ms)[0m   [0mSELECT * FROM `messages` [0m
+  [4;36;1mMessage Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering template within layouts/application
+Rendering messages/index
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '47b857ee6c422d04e0ed38fca7ca719d16edda62aca13031c833df2164fc89000a8ae8332219821b99525accce4245e85b6e6124a287b6ac2baf23d5497c5603e1bf77c76f8d1bfb4c8c81b74775bc913a3a5844233dc651ee2f992fe140469efe3a28d1') LIMIT 1[0m
+Completed in 22ms (View: 14, DB: 4) | 200 OK [http://localhost/messages]
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2008-11-30 20:10:07) [GET]
+  Session ID: BAh7CToKdG9rZW4iAcg0N2I4NTdlZTZjNDIyZDA0ZTBlZDM4ZmNhN2NhNzE5ZDE2ZWRkYTYyYWNhMTMwMzFjODMzZGYyMTY0ZmM4OTAwMGE4YWU4MzMyMjE5ODIxYjk5NTI1YWNjY2U0MjQ1ZTg1YjZlNjEyNGEyODdiNmFjMmJhZjIzZDU0OTdjNTYwM2UxYmY3N2M3NmY4ZDFiZmI0YzhjODFiNzQ3NzViYzkxM2EzYTU4NDQyMzNkYzY1MWVlMmY5OTJmZTE0MDQ2OWVmZTNhMjhkMToMY3NyZl9pZCIlODkzNzIyZDA5ZWFmMzMxYjBmNTA5MjcxN2NiZGJiYTM6EWN1cnJlbnRfdXNlcjAiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA=--c0830be92dd611cf96eb2bb7c1d801be21ea04ed
+  Parameters: {"action"=>"logout", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering users/logout
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/leave]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-30 20:10:09) [GET]
+  Session ID: BAh7CToKdG9rZW4wOhFjdXJyZW50X3VzZXIwOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b89ac82b9a35391f87d40c95942fb113c0bf7105
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to controllerUsersactionnew
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/messages]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-11-30 20:10:09) [GET]
+  Session ID: BAh7CToKdG9rZW4wOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMzoRY3VycmVudF91c2VyMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d64bd7e0a34324388238d3b2181f4c0da5b0d25a
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+Completed in 17ms (View: 10, DB: 2) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-30 20:10:14) [POST]
+  Session ID: BAh7CToKdG9rZW4wOhFjdXJyZW50X3VzZXIwOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b89ac82b9a35391f87d40c95942fb113c0bf7105
+  Parameters: {"user"=>{"email"=>"tjhubertz@gmail.com"}, "commit"=>"Send", "authenticity_token"=>"94e4288581ca7c6ae787c72bd457f36d06062e5a", "action"=>"create", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`email` = 'tjhubertz@gmail.com') LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Update (0.3ms)[0m   [0mUPDATE `users` SET `token` = 'be18e9f627e5ff273636ae125801a93b15ed56bb2e4ac02c1900714db8d9e81f0b17b2dba2933445e8b17b4d027b6ef453777a0751bcda2fe7f3217f59f3c9879f9aee1c9e9e2fa310bc45edb95fcfde417e52f1bafd6663339569f6fdef0cdd5b038c05', `updated_at` = '2008-11-30 19:10:14' WHERE `id` = 15[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+Sending token to existing user be18e9f627e5ff273636ae125801a93b15ed56bb2e4ac02c1900714db8d9e81f0b17b2dba2933445e8b17b4d027b6ef453777a0751bcda2fe7f3217f59f3c9879f9aee1c9e9e2fa310bc45edb95fcfde417e52f1bafd6663339569f6fdef0cdd5b038c05 to tjhubertz@gmail.com
+Sent mail to tjhubertz@gmail.com
+
+Date: Sun, 30 Nov 2008 20:10:14 +0100
+From: Do not reply <bounce@thubhub.com>
+To: tjhubertz@gmail.com
+Subject: [http://localhost:3000] Your access token
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+This is your new link to log on as tjhubertz@gmail.com
+
+  http://localhost:3000/enter/be18e9f627e5ff273636ae125801a93b15ed56bb2e4ac02c1900714db8d9e81f0b17b2dba2933445e8b17b4d027b6ef453777a0751bcda2fe7f3217f59f3c9879f9aee1c9e9e2fa310bc45edb95fcfde417e52f1bafd6663339569f6fdef0cdd5b038c05
+
+Regards
+thubhub.com
+
+
+Redirected to #<User:0x22ed1e4>
+Completed in 88ms (DB: 4) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-30 20:10:14) [GET]
+  Session ID: BAh7CToKdG9rZW4wOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMzoRY3VycmVudF91c2VyMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiR0VtYWlsIHdpdGggZW50cnkgbGluayB3YXMgc3VjY2Vzc2Z1bGx5IHNlbnQgdG8gdGpodWJlcnR6QGdtYWlsLmNvbQY6CkB1c2VkewY7CUY=--f0a6651ef1cbf7e2f28e37bc6956005435e1a067
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+Completed in 16ms (View: 6, DB: 3) | 200 OK [http://localhost/users/15]
+
+
+Processing UsersController#logout (for 127.0.0.1 at 2008-11-30 20:11:14) [GET]
+  Session ID: BAh7CToKdG9rZW4wOhFjdXJyZW50X3VzZXIwOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiR0VtYWlsIHdpdGggZW50cnkgbGluayB3YXMgc3VjY2Vzc2Z1bGx5IHNlbnQgdG8gdGpodWJlcnR6QGdtYWlsLmNvbQY6CkB1c2VkewY7CVQ=--939e826074d054b062a255ab29059c0d4d01064d
+  Parameters: {"action"=>"logout", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to controllerUsersactionnew
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/leave]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2008-11-30 20:11:14) [GET]
+  Session ID: BAh7CToKdG9rZW4wOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMzoRY3VycmVudF91c2VyMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--d64bd7e0a34324388238d3b2181f4c0da5b0d25a
+  Parameters: {"action"=>"new", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendering template within layouts/application
+Rendering users/new
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+Completed in 18ms (View: 11, DB: 3) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2008-11-30 20:11:19) [POST]
+  Session ID: BAh7CToKdG9rZW4wOhFjdXJyZW50X3VzZXIwOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA==--b89ac82b9a35391f87d40c95942fb113c0bf7105
+  Parameters: {"user"=>{"email"=>"tjhubertz@gmail.com"}, "commit"=>"Send", "authenticity_token"=>"94e4288581ca7c6ae787c72bd457f36d06062e5a", "action"=>"create", "controller"=>"users"}
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (2.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`email` = 'tjhubertz@gmail.com') LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.3ms)[0m   [0;1mUPDATE `users` SET `token` = '7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2', `updated_at` = '2008-11-30 19:11:19' WHERE `id` = 15[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCOMMIT[0m
+Sending token to existing user 7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2 to tjhubertz@gmail.com
+Sent mail to tjhubertz@gmail.com
+
+Date: Sun, 30 Nov 2008 20:11:19 +0100
+From: Do not reply <bounce@thubhub.com>
+To: tjhubertz@gmail.com
+Subject: [http://localhost:3000] Your access token
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+This is your new link to log on as tjhubertz@gmail.com
+
+  http://localhost:3000/enter/7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2
+
+Regards
+thubhub.com
+
+
+Redirected to #<User:0x2158dec>
+Completed in 95ms (DB: 5) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-11-30 20:11:19) [GET]
+  Session ID: BAh7CToKdG9rZW4wOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMzoRY3VycmVudF91c2VyMCIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiR0VtYWlsIHdpdGggZW50cnkgbGluayB3YXMgc3VjY2Vzc2Z1bGx5IHNlbnQgdG8gdGpodWJlcnR6QGdtYWlsLmNvbQY6CkB1c2VkewY7CUY=--f0a6651ef1cbf7e2f28e37bc6956005435e1a067
+  Parameters: {"action"=>"show", "id"=>"15", "controller"=>"users"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+Rendering template within layouts/application
+Rendering users/show
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` IS NULL) LIMIT 1[0m
+Completed in 16ms (View: 7, DB: 3) | 200 OK [http://localhost/users/15]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-30 20:11:32) [GET]
+  Session ID: BAh7CToKdG9rZW4wOhFjdXJyZW50X3VzZXIwOgxjc3JmX2lkIiU4OTM3MjJkMDllYWYzMzFiMGY1MDkyNzE3Y2JkYmJhMyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiR0VtYWlsIHdpdGggZW50cnkgbGluayB3YXMgc3VjY2Vzc2Z1bGx5IHNlbnQgdG8gdGpodWJlcnR6QGdtYWlsLmNvbQY6CkB1c2VkewY7CVQ=--939e826074d054b062a255ab29059c0d4d01064d
+  Parameters: {"token"=>"7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2", "action"=>"index", "controller"=>"messages"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2') LIMIT 1[0m
+Redirected to controllerMessagesactionindex
+Filter chain halted as [:check_token] rendered_or_redirected.
+Completed in 6ms (DB: 2) | 302 Found [http://localhost/enter/7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2008-11-30 20:11:32) [GET]
+  Session ID: BAh7CToKdG9rZW4iaTc4MTlkOGJlOGNjZjNlMTU1NjJiMzczMzlkNTYyZjZiNzVmNmE3MDdmNWY0ODVmMzNmZjNlMjE1NTY2ZDc2NDBiNmFmNWVkMjFiMzA4Nzk1NmRlMjVmNjc3ZjE0MGVlYTFlZTI6DGNzcmZfaWQiJTg5MzcyMmQwOWVhZjMzMWIwZjUwOTI3MTdjYmRiYmEzOhFjdXJyZW50X3VzZXIwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVyOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--62a1249c893eacd01c23ffff53b163322669dbf7
+  Parameters: {"action"=>"index", "controller"=>"messages"}
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mMessage Load (0.2ms)[0m   [0;1mSELECT * FROM `messages` [0m
+  [4;35;1mMessage Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering template within layouts/application
+Rendering messages/index
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 14) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 15) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`token` = '7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`token` = '7819d8be8ccf3e15562b37339d562f6b75f6a707f5f485f33ff3e215566d7640b6af5ed21b3087956de25f677f140eea1ee2') LIMIT 1[0m
+Completed in 27ms (View: 19, DB: 5) | 200 OK [http://localhost/messages]

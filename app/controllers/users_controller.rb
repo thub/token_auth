@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     
-    token = generate_token(@user.email)
+    token = generate_token
         
     existing_user = User.find_by_email(@user.email)
     if existing_user !=nil
@@ -38,11 +38,8 @@ class UsersController < ApplicationController
     end
   end
 
-  def generate_token(email)
-    salt1 = Time.new
-    salt2 = email
-    salt3 = SITE
-    Digest::SHA1.hexdigest("--#{salt1}--#{salt2}--#{salt3}--")
+  def generate_token
+    ActiveSupport::SecureRandom.hex(50)
   end
 
   def send_token_email_to_existing_user(user)  
