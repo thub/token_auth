@@ -1,5 +1,5 @@
 A token based authentication demo
-I find leaving my password at x sites problematic as I tend to use the same password for multiple sites. A site admin could easily get to the passwords act as me on a number of other sites.
+I find leaving my password at x sites problematic as I tend to use the same password for multiple sites. A site admin could easily get to the passwords and act as me on a number of other sites.
 I usually check the 'remember me' box when logging in so if anyone gets at my cookies I'm also compromised.
 The following is a demo on an alternative approach.
 Implemented in Ruby on Rails
